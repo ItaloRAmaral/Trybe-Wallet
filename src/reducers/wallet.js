@@ -1,6 +1,7 @@
 import {
   IS_FETCHING,
   FETCH_ALL_CURRENCIES,
+  FETCH_CURRENCIES,
 } from '../actions';
 
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
@@ -22,6 +23,16 @@ const walletReducer = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       currencies: action.payload,
+      isLoading: false,
+    };
+
+  case FETCH_CURRENCIES:
+    return {
+      ...state,
+      expenses: [...state.expenses, {
+        ...action.expenses,
+        exchangeRates: action.currencies,
+      }],
       isLoading: false,
     };
 
