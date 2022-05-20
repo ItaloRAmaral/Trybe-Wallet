@@ -35,11 +35,6 @@ const mapStateToProps = (state) => ({
   expenses: state.wallet.expenses,
 });
 
-// const mapDispatchToProps = (dispatch) => ({
-//   getAllCurrencies: () => dispatch(fetchAllCurrencies()),
-//   getCurrencie: (expenses) => dispatch(fetchCurrencie(expenses)),
-// });
-
 ExpenseTable.propTypes = {
   expenses: PropTypes.arrayOf.isRequired,
 };

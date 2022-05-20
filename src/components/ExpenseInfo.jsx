@@ -1,5 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { removeExpenseAction } from '../actions';
 
 class ExpenseInfo extends React.Component {
   totalSpent = (spent) => {
@@ -25,7 +27,7 @@ class ExpenseInfo extends React.Component {
   }
 
   render() {
-    const { spent } = this.props;
+    const { spent, removeExpense } = this.props;
 
     return (
       <tbody>
@@ -38,15 +40,35 @@ class ExpenseInfo extends React.Component {
           <td>{this.getCurrencyName(spent)}</td>
           <td>{this.totalSpent(spent)}</td>
           <td>Real</td>
-          <td>Editar/Excluir</td>
+          <td>
+            <button
+              name={ spent.id }
+              type="button"
+            >
+              Editar
+            </button>
+            <button
+              name={ spent.id }
+              type="button"
+              onClick={ () => removeExpense(spent.id) }
+              data-testid="delete-btn"
+            >
+              Excluir
+            </button>
+          </td>
         </tr>
       </tbody>
     );
   }
 }
 
+const mapDispatchToProps = (dispatch) => ({
+  removeExpense: (id) => dispatch(removeExpenseAction(id)),
+});
+
 ExpenseInfo.propTypes = {
   spent: PropTypes.objectOf.isRequired,
+  removeExpense: PropTypes.func.isRequired,
 };
 
-export default (ExpenseInfo);
+export default connect(null, mapDispatchToProps)(ExpenseInfo);

@@ -59,3 +59,11 @@ export const fetchCurrencie = (expenses) => {
     }
   };
 };
+
+// conts das actions da logica de excluir gasto da wallet
+export const REMOVE_EXPENSE = 'REMOVE_EXPENSE';
+
+export const removeExpenseAction = (id) => ({
+  type: REMOVE_EXPENSE,
+  id,
+});
