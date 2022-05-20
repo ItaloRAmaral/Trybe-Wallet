@@ -6,9 +6,9 @@ class Header extends React.Component {
     totalCalcExpenses = (expenses) => {
       let totalExpenses = 0;
       expenses.forEach((gasto) => {
-        const a = Object.entries(gasto.exchangeRates)
+        const coinValue = Object.entries(gasto.exchangeRates)
           .find((currency) => currency[0] === gasto.currency);
-        totalExpenses += (gasto.value * a[1].ask);
+        totalExpenses += (gasto.value * coinValue[1].ask);
         return totalExpenses;
       });
       return totalExpenses;
@@ -16,15 +16,6 @@ class Header extends React.Component {
 
     render() {
       const { email, expenses } = this.props;
-      console.log(expenses);
-      // let totalExpenses = 0;
-      // const totalCalcExpenses = expenses.forEach((gasto) => {
-      //   const a = Object.entries(gasto.exchangeRates).find((currency) => {
-      //     return currency[0] === gasto.currency;
-      //   });
-      //   console.log(a);
-      //   totalExpenses += (gasto.value * a[1].ask);
-      // });
 
       return (
         <header className="border border-2">
