@@ -3,6 +3,8 @@ import {
   FETCH_ALL_CURRENCIES,
   FETCH_CURRENCIES,
   REMOVE_EXPENSE,
+  EDIT_BTN_FORMS,
+  UPDATE_EXPENSES,
 } from '../actions';
 
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
@@ -10,6 +12,9 @@ const INITIAL_STATE = {
   currencies: [],
   expenses: [],
   isLoading: false,
+  editExpenseBtn: false,
+  editExpenseId: '',
+  editExpenseObj: {},
 };
 
 const walletReducer = (state = INITIAL_STATE, action) => {
@@ -41,6 +46,23 @@ const walletReducer = (state = INITIAL_STATE, action) => {
     return {
       ...state,
       expenses: state.expenses.filter((expense) => expense.id !== action.id),
+    };
+
+  case EDIT_BTN_FORMS:
+    return {
+      ...state,
+      editExpenseBtn: true,
+      editExpenseId: action.id,
+      editExpenseObj: { ...action.expense },
+    };
+
+  case UPDATE_EXPENSES:
+    return {
+      ...state,
+      editExpenseBtn: false,
+      editExpenseId: '',
+      editExpenseObj: {},
+      expenses: [...action.expenses],
     };
 
   default:

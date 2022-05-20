@@ -67,3 +67,19 @@ export const removeExpenseAction = (id) => ({
   type: REMOVE_EXPENSE,
   id,
 });
+
+// consts das actions da logica de editar o gasto da wallet
+export const EDIT_BTN_FORMS = 'EDIT_BTN_FORMS';
+
+export const editBtnFormsAction = (id, expense) => ({
+  type: EDIT_BTN_FORMS,
+  id,
+  expense,
+});
+
+export const UPDATE_EXPENSES = 'UPDATE_EXPENSES';
+
+export const updateExpensesAction = (expenses) => ({
+  type: UPDATE_EXPENSES,
+  expenses,
+});

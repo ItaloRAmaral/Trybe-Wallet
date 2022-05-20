@@ -1,9 +1,17 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeExpenseAction } from '../actions';
+import { removeExpenseAction, editBtnFormsAction } from '../actions';
 
 class ExpenseInfo extends React.Component {
+  // constructor() {
+  //   super();
+
+  //   this.state = {
+  //     editExpense: false,
+  //   };
+  // }
+
   totalSpent = (spent) => {
     const coinValue = Object.entries(spent.exchangeRates)
       .find((currency) => currency[0] === spent.currency);
@@ -26,8 +34,14 @@ class ExpenseInfo extends React.Component {
     return coinName;
   }
 
+  handleEditForms = () => {
+    const { editBtn, spent } = this.props;
+    editBtn(spent.id, spent);
+  }
+
   render() {
     const { spent, removeExpense } = this.props;
+    // const { editExpense } = this.state;
 
     return (
       <tbody>
@@ -44,6 +58,8 @@ class ExpenseInfo extends React.Component {
             <button
               name={ spent.id }
               type="button"
+              onClick={ this.handleEditForms }
+              data-testid="edit-btn"
             >
               Editar
             </button>
@@ -64,11 +80,13 @@ class ExpenseInfo extends React.Component {
 
 const mapDispatchToProps = (dispatch) => ({
   removeExpense: (id) => dispatch(removeExpenseAction(id)),
+  editBtn: (id, expense) => dispatch(editBtnFormsAction(id, expense)),
 });
 
 ExpenseInfo.propTypes = {
   spent: PropTypes.objectOf.isRequired,
   removeExpense: PropTypes.func.isRequired,
+  editBtn: PropTypes.func.isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(ExpenseInfo);
