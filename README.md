@@ -8,8 +8,6 @@ O desafio deste projeto era de desenvolver uma carteira de controle de gastos co
  - Visualizar uma tabelas com seus gastos;
  - Visualizar o total de gastos convertidos para uma moeda de escolha;
 
-<span style="font-size:8px">OBS: Este projeto foi realizado com proposta educacional e não comercial, não é autorizado o uso deste código com principios além do educacional</span>
-
 ## ⚙️ Como Executar
 Clone o repositório em uma pasta de preferência
 
@@ -48,3 +46,7 @@ npm start
 
 ## :iphone: Como funciona
 <img src="./trybeWalletHowItWorks.gif" />
+
+##
+
+<span style="font-size:8px">OBS: Este projeto foi realizado com proposta educacional e não comercial, portanto, não é autorizado o uso deste código com principios além do educacional</span>
