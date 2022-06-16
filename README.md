@@ -1,5 +1,4 @@
-# Trybe Wallet
-###### by _[Italo Amaral](https://www.linkedin.com/in/italo-rockenbach-594082132/)_
+# Trybe Wallet ###### by _[Italo Amaral](https://www.linkedin.com/in/italo-rockenbach-594082132/)_
 
 ## :page_with_curl: Sobre
 O desafio deste projeto era de desenvolver uma carteira de controle de gastos com conversor de moedas, e ao utilizar essa aplicação um usuário deverá ser capaz de:
