@@ -1,3 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+tr, td, th {
+    border: 1px solid white;
+}
+
+th {
+    background-color: #f25f4c;
+    color: white;
+    
+}
+
+
+tbody:nth-child(odd) {
+    background-color: #f25f4c;
+    opacity: 0.5;
+}
+
+tbody:nth-child(even) {
+    background-color: #e53170;
+    opacity: 0.5;
+}

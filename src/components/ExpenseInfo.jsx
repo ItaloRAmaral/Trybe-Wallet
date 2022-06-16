@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeExpenseAction, editBtnFormsAction } from '../actions';
+import { NotePencil, Trash } from 'phosphor-react';
 
 class ExpenseInfo extends React.Component {
   // constructor() {
@@ -31,7 +32,7 @@ class ExpenseInfo extends React.Component {
       .find((currency) => currency[0] === spent.currency);
 
     const coinName = getFullName[1].name.split('/');
-    return coinName;
+    return coinName[0];
   }
 
   handleEditForms = () => {
@@ -44,7 +45,7 @@ class ExpenseInfo extends React.Component {
     // const { editExpense } = this.state;
 
     return (
-      <tbody>
+      <tbody className="text-center">
         <tr>
           <td>{spent.description}</td>
           <td>{spent.tag}</td>
@@ -61,7 +62,7 @@ class ExpenseInfo extends React.Component {
               onClick={ this.handleEditForms }
               data-testid="edit-btn"
             >
-              Editar
+              <NotePencil />
             </button>
             <button
               name={ spent.id }
@@ -69,7 +70,7 @@ class ExpenseInfo extends React.Component {
               onClick={ () => removeExpense(spent.id) }
               data-testid="delete-btn"
             >
-              Excluir
+              <Trash />
             </button>
           </td>
         </tr>

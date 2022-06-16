@@ -7,11 +7,9 @@ class ExpenseTable extends React.Component {
   render() {
     const { expenses } = this.props;
     return (
-      <section>
-        {/* <h1>Tabela de Gastos</h1> */}
-        <table>
+      <section className="flex flex-col p-[0.5rem]">
+        <table className="">
           <thead>
-            <header>Tabela de Gastos</header>
             <tr>
               <th>Descrição</th>
               <th>Tag</th>
@@ -36,7 +34,7 @@ const mapStateToProps = (state) => ({
 });
 
 ExpenseTable.propTypes = {
-  expenses: PropTypes.arrayOf.isRequired,
+  expenses: PropTypes.arrayOf(PropTypes.shape).isRequired,
 };
 
 export default connect(mapStateToProps)(ExpenseTable);

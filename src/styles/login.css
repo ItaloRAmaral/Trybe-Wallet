@@ -1,0 +1,80 @@
+/* stylelint-disable CssSyntaxError */
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable at-rule-empty-line-before */
+/* stylelint-disable media-feature-colon-space-before */
+/* stylelint-disable media-feature-parentheses-space-inside */
+/* stylelint-disable length-zero-no-unit */
+/* stylelint-disable max-line-length */
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable selector-max-specificity */
+/* stylelint-disable indentation */
+
+#form-cointainer {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@media screen and (min-width: 375px) and (max-width: 639px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    img {
+        display: none;
+    }
+
+    #form-container {
+        width: 70%;
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 767px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    #title {
+        font-size: 2.7rem;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    img {
+        width: 500px;
+    }
+
+    #form-container {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1536px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    img {
+        width: 500px;
+    }
+
+    #form-container {
+        width: 30%;
+    }
+}
+

@@ -6,7 +6,7 @@ import Header from '../components/Header';
 class Wallet extends React.Component {
   render() {
     return (
-      <section>
+      <section className="bg-[#fffffe] text-[#fffffe]">
         <Header />
         <AddForms />
         <ExpenseTable />

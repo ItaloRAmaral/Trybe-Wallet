@@ -5,7 +5,7 @@ import Wallet from './pages/Wallet';
 
 function App() {
   return (
-    <section>
+    <section className="h-screen">
       <Route exact path="/" component={ Login } />
       <Route exact path="/carteira" component={ Wallet } />
     </section>
