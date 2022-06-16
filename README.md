@@ -1,4 +1,4 @@
-# Star Wars Planet Search
+# Trybe Wallet
 ###### by _[Italo Amaral](https://www.linkedin.com/in/italo-rockenbach-594082132/)_
 
 ## :page_with_curl: Sobre
