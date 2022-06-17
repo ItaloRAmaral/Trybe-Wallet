@@ -8,22 +8,6 @@ O desafio deste projeto era de desenvolver uma carteira de controle de gastos co
  - Visualizar uma tabelas com seus gastos;
  - Visualizar o total de gastos convertidos para uma moeda de escolha;
 
-## ⚙️ Como Executar
-Clone o repositório em uma pasta de preferência
-
-```
-git clone git@github.com:ItaloRAmaral/Star-Wars-Planet-Search.git
-```
-
-Entre na pasta que você acabou de clonar, e instale as dependencias
-```
-npm install
-```
-Para rodar o projeto no navegador, basta utilizar o codigo abaixo 
-```
-npm start
-```
-
 ## :memo: Metodologia Utilizada
 
 * Kanban
@@ -43,6 +27,22 @@ npm start
 * REACT
 * REDUX
 * TAILWIND
+
+## ⚙️ Como Executar
+Clone o repositório em uma pasta de preferência
+
+```
+git clone git@github.com:ItaloRAmaral/Star-Wars-Planet-Search.git
+```
+
+Entre na pasta que você acabou de clonar, e instale as dependencias
+```
+npm install
+```
+Para rodar o projeto no navegador, basta utilizar o codigo abaixo 
+```
+npm start
+```
 
 ## :iphone: Como funciona
 <img src="./trybeWalletHowItWorks.gif" />
