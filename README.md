@@ -26,7 +26,10 @@ O desafio deste projeto era de desenvolver uma carteira de controle de gastos co
 
 * REACT
 * REDUX
-* TAILWIND
+* TAILWIND 
+
+## :memo: Melhorias a serem implementadas
+* Responsividade total
 
 ## ⚙️ Como Executar
 Clone o repositório em uma pasta de preferência
